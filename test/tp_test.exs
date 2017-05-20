@@ -10,4 +10,8 @@ defmodule TpTest do
     assert Tp.run(fn(x) -> 2 + x end, 2) == 4
   end
 
+  test "runs an anonymous function with 2 params" do
+    assert Tp.run(fn(x, y) -> x + y end, [1, 2]) == 3
+  end
+
 end
