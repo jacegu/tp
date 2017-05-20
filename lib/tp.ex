@@ -1,7 +1,7 @@
 defmodule Tp do
 
-  def run(_) do
-    4
+  def run(fun) do
+    fun.()
   end
 
 end
