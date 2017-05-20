@@ -1,18 +1,7 @@
 defmodule Tp do
-  @moduledoc """
-  Documentation for Tp.
-  """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Tp.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def run(_) do
+    4
   end
+
 end
