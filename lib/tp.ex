@@ -1,6 +1,10 @@
 defmodule Tp do
 
-  def run([fun1, fun2], params), do: apply(fun2, apply(fun1, params))
+  def run(funs, params) when is_list(funs) do
+    Enum.reduce(funs, params, fn(fun, result) ->
+      apply(fun, result)
+    end)
+  end
   def run(fun, params), do: apply(fun, params)
 
 end
