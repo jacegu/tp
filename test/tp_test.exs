@@ -1,8 +1,8 @@
 defmodule TpTest do
   use ExUnit.Case
-  doctest Tp
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  test "runs an anonymous function without params" do
+    assert Tp.run(fn -> 2 + 2 end) == 4
   end
+
 end
