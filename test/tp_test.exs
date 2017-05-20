@@ -6,4 +6,8 @@ defmodule TpTest do
     assert Tp.run(fn -> String.upcase("foo") end) == "FOO"
   end
 
+  test "runs an anonymous function with 1 param" do
+    assert Tp.run(fn(x) -> 2 + x end, 2) == 4
+  end
+
 end
